@@ -7,4 +7,4 @@
   -- Seja sempre mente aberta para o aprendizado! --
 
 ## Dica do Derik:
- -- Não use o GitHub como um "Pen Drive": Explique que repositórios sem documentação não têm valor para recrutadores.
+ -- Não use o GitHub como um "Pen Drive": Explique que repositórios sem documentação não têm valor para recrutadores. --
