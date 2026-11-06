@@ -8,3 +8,6 @@
 
 ## Dica do Derik:
  -- Não use o GitHub como um "Pen Drive": Explique que repositórios sem documentação não têm valor para recrutadores. --
+
+## Nova dica:
+ -- Commit: É o "salvar o jogo". Toda vez que você termina um pedaço do trabalho, você dá um commit com um aviso do que mudou. --
