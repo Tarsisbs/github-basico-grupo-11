@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Introdução simples ao Git e GitHub para iniciantes.">
+  <title>GitHub do Zero | Guia para iniciantes</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="topo">
+    <a class="marca" href="#inicio"><span class="marca-icone">⌘</span> GitHub do Zero</a>
+    <nav aria-label="Navegação principal">
+      <a href="#conceitos">Conceitos</a>
+      <a href="#primeiros-passos">Primeiros passos</a>
+      <a href="#colaboracao">Colaboração</a>
+      <a href="#atividade">Atividade</a>
+      <a href="#referencias">Referências</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-conteudo">
+        <span class="etiqueta">GUIA BÁSICO PARA INICIANTES</span>
+        <h1>Aprenda Git e GitHub <span>do zero.</span></h1>
+        <p>Entenda como guardar arquivos, acompanhar alterações e trabalhar em equipe usando o GitHub — tudo pelo navegador, sem precisar instalar programas.</p>
+        <a class="botao" href="#conceitos">Começar a aprender <span>→</span></a>
+      </div>
+      <div class="hero-card" aria-label="Exemplo ilustrativo de histórico de alterações">
+        <div class="janela-topo"><i></i><i></i><i></i><span>meu-projeto</span></div>
+        <div class="terminal-linha"><b>✓</b> Arquivo criado</div>
+        <div class="terminal-linha"><b>✓</b> Alteração registrada</div>
+        <div class="terminal-linha"><b>✓</b> Colega convidado</div>
+        <div class="terminal-linha destaque"><b>↗</b> Projeto compartilhado!</div>
+        <small>Exemplo ilustrativo</small>
+      </div>
+    </section>
+
+    <section class="secao" id="conceitos">
+      <div class="cabecalho-secao"><span class="numero">01</span><div><p class="sobretitulo">ENTENDA O BÁSICO</p><h2>O que são Git e GitHub?</h2></div></div>
+      <div class="grade dois">
+        <article class="cartao conceito">
+          <div class="icone">⏱</div><h3>Git</h3>
+          <p>É um <strong>sistema de controle de versão</strong>. Ele registra as mudanças feitas nos arquivos de um projeto e permite consultar versões anteriores.</p>
+          <p class="exemplo">Pense nele como um histórico organizado de tudo o que mudou em um trabalho.</p>
+        </article>
+        <article class="cartao conceito">
+          <div class="icone roxo">☁</div><h3>GitHub</h3>
+          <p>É uma plataforma online que hospeda repositórios Git. Ela facilita guardar projetos na internet, compartilhar arquivos e colaborar com outras pessoas.</p>
+          <p class="exemplo">É como uma área de trabalho online para organizar e compartilhar projetos.</p>
+        </article>
+      </div>
+      <div class="aviso"><strong>Resumindo:</strong> Git é a ferramenta de controle de versões; GitHub é uma plataforma que utiliza Git e oferece recursos de colaboração online.</div>
+      <h3 class="subtitulo">O que é um repositório?</h3>
+      <p>É o espaço onde ficam os arquivos de um projeto e seu histórico de alterações.</p>
+      <div class="grade dois">
+        <div class="cartao pequeno"><span class="tag verde">PÚBLICO</span><h3>Visível para todos</h3><p>Qualquer pessoa pode visualizar o conteúdo. É útil para divulgar projetos e materiais abertos.</p></div>
+        <div class="cartao pequeno"><span class="tag azul">PRIVADO</span><h3>Acesso restrito</h3><p>Somente o proprietário e as pessoas autorizadas podem acessar o conteúdo. É indicado para trabalhos que não devem ficar abertos ao público.</p></div>
+      </div>
+    </section>
+
+    <section class="secao fundo" id="funcoes">
+      <div class="cabecalho-secao"><span class="numero">02</span><div><p class="sobretitulo">PALAVRAS IMPORTANTES</p><h2>Conheça as funções do GitHub</h2></div></div>
+      <p class="introducao">Estes são os principais recursos que você precisará conhecer para realizar a atividade.</p>
+      <div class="lista-funcoes">
+        <article><span class="mini-icone">R</span><div><h3>README</h3><p>Arquivo de apresentação do repositório. Explica o objetivo do projeto, seus conteúdos e como utilizá-lo. Geralmente é escrito em Markdown.</p></div></article>
+        <article><span class="mini-icone">M</span><div><h3>Markdown (.md)</h3><p>Uma forma simples de formatar textos usando símbolos. Por exemplo, <code># Título</code> cria um título e <code>**negrito**</code> destaca uma palavra.</p></div></article>
+        <article><span class="mini-icone">C</span><div><h3>Commit</h3><p>É um registro de uma alteração no repositório. Cada commit deve ter uma mensagem clara, como “Adiciona explicação sobre README”.</p></div></article>
+        <article><span class="mini-icone">H</span><div><h3>Histórico de alterações</h3><p>Mostra os commits realizados, permitindo identificar quem fez cada alteração e quando ela foi registrada.</p></div></article>
+        <article><span class="mini-icone">B</span><div><h3>Branch (ramificação)</h3><p>É uma linha de trabalho separada da principal. Permite fazer melhorias sem alterar imediatamente a versão principal.</p></div></article>
+        <article><span class="mini-icone">P</span><div><h3>Pull Request (solicitação de alteração)</h3><p>É uma proposta para revisar e incorporar mudanças de uma branch em outra. Os colegas podem analisar e comentar antes da aprovação.</p></div></article>
+        <article><span class="mini-icone">M</span><div><h3>Merge (mesclagem)</h3><p>É a união das alterações de uma branch com outra, por exemplo, incorporando uma melhoria à branch principal.</p></div></article>
+      </div>
+    </section>
+
+    <section class="secao" id="primeiros-passos">
+      <div class="cabecalho-secao">
+        <span class="numero">03</span>
+        <div>
+          <p class="sobretitulo">COMECE A USAR</p>
+          <h2>Como criar seu primeiro repositório</h2>
+        </div>
+      </div>
+
+      <p class="introducao">
+        Você pode realizar estes passos pelo navegador, sem instalar
+        o Git e sem usar o terminal. Clique em cada etapa para assistir
+        à explicação em vídeo.
+      </p>
+
+      <ol class="passos">
+
+        <li>
+          <span>1</span>
+          <details class="passo-video">
+            <summary>
+              <span class="passo-titulo">Crie ou acesse sua conta</span>
+              <span class="passo-descricao">
+                Entre em <a href="https://github.com/" target="_blank" rel="noopener">github.com</a>
+                e faça login. Se ainda não tiver conta, escolha a opção de cadastro.
+              </span>
+            </summary>
+            <div class="video-aula">
+              <video controls preload="metadata">
+                <source src="./videos/Login.mp4" type="video/mp4">
+                Seu navegador não suporta a reprodução deste vídeo.
+              </video>
+              <p>Vídeo explicativo: como acessar ou criar uma conta no GitHub.</p>
+            </div>
+          </details>
+        </li>
+
+        <li>
+          <span>2</span>
+          <details class="passo-video">
+            <summary>
+              <span class="passo-titulo">Crie um repositório</span>
+              <span class="passo-descricao">
+                Clique no sinal de <strong>+</strong> e escolha
+                <strong>New repository</strong>. Dê um nome, escolha
+                público ou privado e clique em <strong>Create repository</strong>.
+              </span>
+            </summary>
+            <div class="video-aula">
+              <video controls preload="metadata">
+                <source src="./videos/Criacao do repositorio.mp4" type="video/mp4">
+                Seu navegador não suporta a reprodução deste vídeo.
+              </video>
+              <p>Vídeo explicativo: criando seu primeiro repositório.</p>
+            </div>
+          </details>
+        </li>
+
+        <li>
+          <span>3</span>
+          <details class="passo-video">
+            <summary>
+              <span class="passo-titulo">Crie o README.md</span>
+              <span class="passo-descricao">
+                Crie o arquivo README.md, escreva a apresentação do projeto
+                e salve usando <strong>Commit changes</strong>.
+              </span>
+            </summary>
+            <div class="video-aula">
+              <video controls preload="metadata">
+                <source src="./videos/Edição no README.mp4" type="video/mp4">
+                Seu navegador não suporta a reprodução deste vídeo.
+              </video>
+              <p>Vídeo explicativo: criando e editando o README.</p>
+            </div>
+          </details>
+        </li>
+
+        <li>
+          <span>4</span>
+          <details class="passo-video">
+            <summary>
+              <span class="passo-titulo">Adicione ou envie arquivos</span>
+              <span class="passo-descricao">
+                Use <strong>Add file → Create new file</strong> para criar
+                um arquivo ou <strong>Upload files</strong> para enviar
+                arquivos do computador.
+              </span>
+            </summary>
+            <div class="video-aula">
+              <video controls preload="metadata">
+                <source src="./videos/Adicionar arquivo.mp4" type="video/mp4">
+                Seu navegador não suporta a reprodução deste vídeo.
+              </video>
+              <p>Vídeo explicativo: adicionando arquivos ao repositório.</p>
+            </div>
+          </details>
+        </li>
+
+        <li>
+          <span>5</span>
+          <details class="passo-video">
+            <summary>
+              <span class="passo-titulo">Consulte o histórico</span>
+              <span class="passo-descricao">
+                Acesse o histórico de commits para visualizar as mensagens,
+                os autores e as alterações registradas.
+              </span>
+            </summary>
+            <div class="video-aula">
+              <video controls preload="metadata">
+                <source src="./videos/Histórico.mp4" type="video/mp4">
+                Seu navegador não suporta a reprodução deste vídeo.
+              </video>
+              <p>Vídeo explicativo: consultando o histórico de alterações.</p>
+            </div>
+          </details>
+        </li>
+
+      </ol>
+
+      <div class="aviso">
+        <strong>Dica:</strong> o GitHub pode mudar alguns nomes ou posições
+        dos botões. Se a tela estiver diferente, procure as opções
+        equivalentes de criação de arquivo, envio e commit.
+      </div>
+    </section>
+
+    <section class="secao fundo" id="colaboracao">
+      <div class="cabecalho-secao">
+        <span class="numero">04</span>
+        <div>
+          <p class="sobretitulo">TRABALHO EM EQUIPE</p>
+          <h2>Como colaborar em um projeto</h2>
+        </div>
+      </div>
+
+      <p class="introducao">
+        Aprenda a trabalhar com outras pessoas utilizando os recursos
+        de colaboração do GitHub. Clique em uma etapa para assistir
+        ao vídeo correspondente.
+      </p>
+
+      <details class="passo-colab">
+        <summary class="passo-colab-resumo">
+          <span class="passo-num">01</span>
+          <span class="passo-conteudo">
+            <span class="passo-titulo">Convide colaboradores</span>
+            <span class="passo-descricao">
+              Abra o repositório, vá em Settings → Collaborators,
+              clique em Add people e procure o usuário GitHub do colega.
+            </span>
+          </span>
+        </summary>
+        <div class="video-aula">
+          <video controls preload="metadata">
+            <source src="./videos/Convite Colaborador.mp4" type="video/mp4">
+            Seu navegador não suporta a reprodução deste vídeo.
+          </video>
+          <p>Vídeo explicativo: convidando pessoas para colaborar.</p>
+        </div>
+      </details>
+
+      <details class="passo-colab">
+        <summary class="passo-colab-resumo">
+          <span class="passo-num">02</span>
+          <span class="passo-conteudo">
+            <span class="passo-titulo">Crie uma branch</span>
+            <span class="passo-descricao">
+              Crie uma nova ramificação chamada melhoria-guia,
+              partindo da branch principal.
+            </span>
+          </span>
+        </summary>
+        <div class="video-aula">
+          <video controls preload="metadata">
+            <source src="./videos/Criar Branch.mp4" type="video/mp4">
+            Seu navegador não suporta a reprodução deste vídeo.
+          </video>
+          <p>Vídeo explicativo: criando uma branch.</p>
+        </div>
+      </details>
+
+      <details class="passo-colab">
+        <summary class="passo-colab-resumo">
+          <span class="passo-num">03</span>
+          <span class="passo-conteudo">
+            <span class="passo-titulo">Faça uma alteração e um commit</span>
+            <span class="passo-descricao">
+              Abra um arquivo na branch, faça uma melhoria e registre
+              a mudança com uma mensagem objetiva.
+            </span>
+          </span>
+        </summary>
+        <div class="video-aula">
+          <video controls preload="metadata">
+            <source src="./videos/Alteração do Branch e Commit.mp4" type="video/mp4">
+            Seu navegador não suporta a reprodução deste vídeo.
+          </video>
+          <p>Vídeo explicativo: editando arquivos e criando commits.</p>
+        </div>
+      </details>
+
+      <details class="passo-colab">
+        <summary class="passo-colab-resumo">
+          <span class="passo-num">04</span>
+          <span class="passo-conteudo">
+            <span class="passo-titulo">Abra um Pull Request</span>
+            <span class="passo-descricao">
+              Crie uma solicitação para comparar sua branch com a
+              principal e permitir que outras pessoas revisem a mudança.
+            </span>
+          </span>
+        </summary>
+        <div class="video-aula">
+          <video controls preload="metadata">
+            <source src="./videos/Solicitação de Pull Request.mp4" type="video/mp4">
+            Seu navegador não suporta a reprodução deste vídeo.
+          </video>
+          <p>Vídeo explicativo: criando um Pull Request.</p>
+        </div>
+      </details>
+
+      <details class="passo-colab">
+        <summary class="passo-colab-resumo">
+          <span class="passo-num">05</span>
+          <span class="passo-conteudo">
+            <span class="passo-titulo">Faça o Merge</span>
+            <span class="passo-descricao">
+              Depois da revisão, incorpore as alterações à branch
+              principal utilizando Merge pull request.
+            </span>
+          </span>
+        </summary>
+        <div class="video-aula">
+          <video controls preload="metadata">
+            <source src="./videos/Conversa no Pull Request e Mesclagem com a branch Main.mp4" type="video/mp4">
+            Seu navegador não suporta a reprodução deste vídeo.
+          </video>
+          <p>Vídeo explicativo: realizando o Merge.</p>
+        </div>
+      </details>
+
+    </section>
+
+    
+    <section class="secao" id="atividade">
+      <div class="cabecalho-secao">
+        <span class="numero">05</span>
+        <div>
+          <p class="sobretitulo">COLOQUE EM PRÁTICA</p>
+          <h2>Agora é sua vez de usar o GitHub!</h2>
+        </div>
+      </div>
+
+      <p class="introducao">
+        Você acabou de conhecer os principais recursos do GitHub.
+        Que tal colocar esse conhecimento em prática? Siga os passos
+        abaixo para criar seu primeiro projeto e experimentar as
+        ferramentas que aprendeu.
+      </p>
+
+      <div class="checklist" id="checklist">
+        <label>
+          <input type="checkbox">
+          Crie uma conta ou acesse sua conta no
+          <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>.
+        </label>
+
+        <label>
+          <input type="checkbox">
+          Crie um novo repositório com o nome
+          <code>meu-primeiro-projeto</code>.
+        </label>
+
+        <label>
+          <input type="checkbox">
+          Escolha se seu repositório será público ou privado
+          e pense em qual situação cada opção é mais adequada.
+        </label>
+
+        <label>
+          <input type="checkbox">
+          Crie um arquivo <code>README.md</code> apresentando
+          seu projeto, seu objetivo e três assuntos que deseja aprender.
+        </label>
+
+        <label>
+          <input type="checkbox">
+          Adicione um novo arquivo chamado
+          <code>anotacoes.md</code> ao seu repositório.
+        </label>
+
+        <label>
+          <input type="checkbox">
+          Escreva algumas anotações sobre o que aprendeu
+          e salve a alteração utilizando um <strong>commit</strong>
+          com uma mensagem clara.
+        </label>
+
+        <label>
+          <input type="checkbox">
+          Acesse o histórico de alterações e identifique
+          seu commit e a mensagem registrada.
+        </label>
+
+        <label>
+          <input type="checkbox">
+          Crie uma nova <strong>branch</strong> chamada
+          <code>minha-primeira-melhoria</code>.
+        </label>
+
+        <label>
+          <input type="checkbox">
+          Faça uma pequena alteração em seu arquivo
+          utilizando a nova branch.
+        </label>
+
+        <label>
+          <input type="checkbox">
+          Abra um <strong>Pull Request</strong> para propor
+          a inclusão da sua alteração na branch principal.
+        </label>
+
+        <label>
+          <input type="checkbox">
+          Revise a alteração e realize o <strong>Merge</strong>
+          para incorporá-la à branch principal.
+        </label>
+
+        <label>
+          <input type="checkbox">
+          Convide um colega para colaborar no seu repositório
+          e peça para ele adicionar uma contribuição.
+        </label>
+      </div>
+
+      <div class="progresso">
+        <div class="progresso-texto">
+          <strong>Seu progresso</strong>
+          <span id="contador">0 de 12 concluídos</span>
+        </div>
+        <div class="barra">
+          <div id="barra-progresso"></div>
+        </div>
+      </div>
+
+      <div class="desafio">
+        <span class="etiqueta">PARABÉNS POR CHEGAR ATÉ AQUI!</span>
+        <h2>Você está dando seus primeiros passos!</h2>
+        <p>
+          Se conseguiu concluir as etapas, você já experimentou
+          na prática os principais recursos do GitHub: criação de
+          repositórios, organização de arquivos, commits,
+          branches, Pull Requests e colaboração.
+        </p>
+
+        <h3>Confira o que você aprendeu:</h3>
+        <ul>
+          <li>Você sabe criar e organizar um repositório.</li>
+          <li>Consegue registrar e consultar alterações.</li>
+          <li>Entende como utilizar branches para fazer melhorias.</li>
+          <li>Sabe propor alterações usando Pull Requests.</li>
+          <li>Consegue compartilhar projetos e colaborar com outras pessoas.</li>
+        </ul>
+
+        <p>
+          <strong>Continue praticando!</strong> Quanto mais projetos
+          você criar, mais familiarizado ficará com o Git e o GitHub.
+        </p>
+      </div>
+    </section>
+
+
+    <section class="secao fundo" id="cuidados">
+      <div class="cabecalho-secao"><span class="numero">06</span><div><p class="sobretitulo">PUBLIQUE COM ATENÇÃO</p><h2>Cuidados ao compartilhar arquivos</h2></div></div>
+      <div class="grade dois">
+        <div class="cartao pequeno"><h3>Antes de publicar</h3><ul><li>Confira se o arquivo pode ser compartilhado.</li><li>Não publique senhas, tokens ou códigos de autenticação.</li><li>Oculte dados pessoais nas capturas de tela.</li><li>Revise o conteúdo e os links.</li></ul></div>
+        <div class="cartao pequeno"><h3>Durante a colaboração</h3><ul><li>Convide apenas as pessoas necessárias.</li><li>Não compartilhe sua senha.</li><li>Use mensagens de commit claras.</li><li>Revise as alterações antes do merge.</li></ul></div>
+      </div>
+    </section>
+
+    <section class="secao" id="referencias">
+      <div class="cabecalho-secao"><span class="numero">07</span><div><p class="sobretitulo">SAIBA MAIS</p><h2>Referências e uso da Inteligência Artificial</h2></div></div>
+      <p>Este guia foi organizado com apoio de Inteligência Artificial. As orientações foram completamente conferidas pelo grupo na documentação oficial e testadas no próprio GitHub antes da entrega.</p>
+      <div class="referencias">
+        <a href="https://docs.github.com/pt/get-started/using-github/hello-world" target="_blank" rel="noopener"><span>Documentação oficial</span><strong>Introdução e prática Hello World ↗</strong></a>
+        <a href="https://docs.github.com/pt/repositories/working-with-files" target="_blank" rel="noopener"><span>Documentação oficial</span><strong>Trabalhar com arquivos ↗</strong></a>
+        <a href="https://docs.github.com/pt/repositories/managing-your-repositorys-settings-and-features/repository-access-and-collaboration/inviting-collaborators-to-a-personal-repository" target="_blank" rel="noopener"><span>Documentação oficial</span><strong>Convidar colaboradores ↗</strong></a>
+        <a href="https://docs.github.com/pt" target="_blank" rel="noopener"><span>Documentação oficial</span><strong>GitHub Docs em português ↗</strong></a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <a class="marca" href="#inicio">⌘ GitHub do Zero</a>
+    <p>Material educativo introdutório • Projeto acadêmico</p>
+    <a href="#inicio" class="voltar">Voltar ao topo ↑</a>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>

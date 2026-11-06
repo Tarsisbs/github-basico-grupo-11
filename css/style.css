@@ -1,0 +1,952 @@
+
+/* =========================================================
+   1. FONTES E VARIÁVEIS GLOBAIS
+========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
+
+:root {
+    --bg: #0b1020;
+    --surface: #121a2d;
+    --surface2: #172238;
+
+    --text: #edf2ff;
+    --muted: #aab5ca;
+
+    --blue: #6c8cff;
+    --cyan: #67d5df;
+    --green: #55d6a1;
+
+    --line: #26334c;
+}
+
+
+/* =========================================================
+   2. CONFIGURAÇÕES GERAIS
+========================================================= */
+
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    line-height: 1.7;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Space Grotesk', sans-serif;
+    line-height: 1.2;
+}
+
+a {
+    color: #8cb3ff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+code {
+    padding: 2px 6px;
+    background: #26334b;
+    color: #b9d4ff;
+    border-radius: 4px;
+    font-size: .9em;
+}
+
+
+/* =========================================================
+   3. CABEÇALHO E NAVEGAÇÃO
+========================================================= */
+
+.topo {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    height: 72px;
+    padding: 0 max(calc((100% - 1120px) / 2), 5%);
+
+    background: #0b1020ee;
+    border-bottom: 1px solid var(--line);
+    backdrop-filter: blur(14px);
+}
+
+.marca {
+    color: var(--text);
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.marca-icone {
+    margin-right: 7px;
+    color: var(--cyan);
+    font-size: 24px;
+}
+
+nav {
+    display: flex;
+    gap: 22px;
+}
+
+nav a {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+nav a:hover {
+    color: white;
+}
+
+
+/* =========================================================
+   4. SEÇÃO PRINCIPAL (HERO)
+========================================================= */
+
+.hero {
+    display: grid;
+    grid-template-columns: 1.2fr .8fr;
+    align-items: center;
+    gap: 65px;
+
+    max-width: 1120px;
+    min-height: 510px;
+    margin: auto;
+    padding: 105px 28px 100px;
+}
+
+.etiqueta,
+.sobretitulo {
+    color: var(--cyan);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+h1 {
+    margin: 18px 0;
+    font-size: clamp(42px, 6vw, 66px);
+    letter-spacing: -2.5px;
+}
+
+h1 span {
+    color: var(--blue);
+}
+
+.hero p,
+.introducao {
+    max-width: 650px;
+    color: var(--muted);
+    font-size: 17px;
+}
+
+.botao {
+    display: inline-flex;
+    align-items: center;
+    gap: 24px;
+
+    margin-top: 20px;
+    padding: 13px 20px;
+
+    background: var(--blue);
+    color: white;
+    border-radius: 9px;
+
+    font-weight: 700;
+}
+
+.botao:hover {
+    background: #829cff;
+    text-decoration: none;
+}
+
+
+/* =========================================================
+   5. CARTÃO VISUAL DO HERO
+========================================================= */
+
+.hero-card {
+    padding: 22px;
+
+    background: linear-gradient(145deg, #182541, #10182a);
+    border: 1px solid #334361;
+    border-radius: 16px;
+
+    box-shadow: 0 25px 80px #0005;
+    transform: rotate(1deg);
+}
+
+.janela-topo {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    margin-bottom: 18px;
+    padding-bottom: 17px;
+
+    color: var(--muted);
+    border-bottom: 1px solid var(--line);
+    font-size: 12px;
+}
+
+.janela-topo i {
+    width: 8px;
+    height: 8px;
+
+    background: #71809b;
+    border-radius: 50%;
+}
+
+.janela-topo span {
+    margin-left: 10px;
+}
+
+.terminal-linha {
+    padding: 12px 9px;
+
+    color: #c5cee0;
+    border-bottom: 1px solid #26334c;
+    font-size: 14px;
+}
+
+.terminal-linha b {
+    margin-right: 10px;
+    color: var(--green);
+}
+
+.terminal-linha.destaque {
+    color: #8fb6ff;
+}
+
+.hero-card small {
+    display: block;
+    margin-top: 14px;
+
+    color: #78869f;
+    text-align: right;
+}
+
+
+/* =========================================================
+   6. ESTRUTURA DAS SEÇÕES
+========================================================= */
+
+.secao {
+    max-width: 1064px;
+    margin: auto;
+    padding: 82px 28px;
+}
+
+.fundo {
+    max-width: none;
+
+    padding-left: max(calc((100% - 1008px) / 2), 5%);
+    padding-right: max(calc((100% - 1008px) / 2), 5%);
+
+    background: #10182a;
+}
+
+.cabecalho-secao {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+
+    margin-bottom: 30px;
+}
+
+.numero {
+    color: var(--blue);
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.sobretitulo {
+    margin: 0 0 5px;
+}
+
+.cabecalho-secao h2 {
+    margin: 0;
+    font-size: 32px;
+    letter-spacing: -.8px;
+}
+
+
+/* =========================================================
+   7. CARTÕES E GRIDS
+========================================================= */
+
+.grade {
+    display: grid;
+    gap: 18px;
+}
+
+.dois {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.cartao {
+    padding: 25px;
+
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 13px;
+}
+
+.conceito h3 {
+    margin: 12px 0;
+    font-size: 24px;
+}
+
+.conceito p,
+.cartao p {
+    margin: 8px 0;
+    color: var(--muted);
+}
+
+.icone {
+    color: var(--cyan);
+    font-size: 25px;
+}
+
+.icone.roxo {
+    color: #b49aff;
+}
+
+.exemplo {
+    margin-top: 18px !important;
+    padding: 12px;
+
+    background: #1a2740;
+    border-radius: 8px;
+
+    font-size: 13px !important;
+}
+
+
+/* =========================================================
+   8. AVISOS, SUBTÍTULOS E TAGS
+========================================================= */
+
+.aviso {
+    margin: 25px 0;
+    padding: 17px 20px;
+
+    background: #142337;
+    color: #c8d4e8;
+
+    border-left: 3px solid var(--cyan);
+    border-radius: 0 9px 9px 0;
+}
+
+.subtitulo {
+    margin: 35px 0 12px;
+}
+
+.tag {
+    display: inline-block;
+
+    padding: 4px 8px;
+
+    border-radius: 5px;
+
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.verde {
+    background: #173d37;
+    color: #75e3b2;
+}
+
+.azul {
+    background: #202f54;
+    color: #9db8ff;
+}
+
+.pequeno h3 {
+    margin: 12px 0 5px;
+    font-size: 18px;
+}
+
+.pequeno p,
+.pequeno li {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   9. LISTA DE FUNCIONALIDADES
+========================================================= */
+
+.lista-funcoes {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+
+    margin-top: 30px;
+}
+
+.lista-funcoes article {
+    display: flex;
+    gap: 15px;
+
+    padding: 18px;
+
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 11px;
+}
+
+.mini-icone {
+    display: grid;
+    flex: 0 0 34px;
+    place-items: center;
+
+    height: 34px;
+
+    background: #26375a;
+    color: #9bb5ff;
+    border-radius: 9px;
+
+    font-weight: 700;
+}
+
+.lista-funcoes h3 {
+    margin: 0 0 5px;
+    font-size: 16px;
+}
+
+.lista-funcoes p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   10. ETAPAS E PASSOS
+========================================================= */
+
+.passos {
+    margin: 35px 0;
+    padding: 0;
+    list-style: none;
+}
+
+.passos li {
+    display: flex;
+    gap: 20px;
+
+    margin-bottom: 27px;
+}
+
+.passos li > span {
+    display: grid;
+    flex: 0 0 38px;
+    place-items: center;
+
+    height: 38px;
+
+    background: #26375a;
+    color: #a9c0ff;
+    border-radius: 50%;
+
+    font-weight: 700;
+}
+
+.passos h3,
+.passo-colab h3 {
+    margin: 0 0 5px;
+    font-size: 18px;
+}
+
+.passos p,
+.passo-colab p {
+    margin: 0;
+    color: var(--muted);
+}
+
+
+/* =========================================================
+   11. ETAPAS EXPANSÍVEIS COM VÍDEOS
+========================================================= */
+
+/* Estrutura dos detalhes */
+
+.passo-video {
+    flex: 1;
+    min-width: 0;
+}
+
+/* Área clicável para abrir e fechar */
+
+.passo-video summary,
+.passo-colab-resumo {
+    position: relative;
+
+    padding: 5px 35px 5px 0;
+
+    cursor: pointer;
+    list-style: none;
+
+    transition: color .25s ease;
+}
+
+/* Remove o marcador padrão do navegador */
+
+.passo-video summary::-webkit-details-marker,
+.passo-colab-resumo::-webkit-details-marker {
+    display: none;
+}
+
+/* Ícone de abrir (+) */
+
+.passo-video summary::after,
+.passo-colab-resumo::after {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+
+    color: var(--cyan);
+    content: "+";
+
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 1;
+
+    transition: transform .25s ease;
+}
+
+/* Ícone de fechar (-) */
+
+.passo-video[open] summary::after,
+.passo-colab[open] .passo-colab-resumo::after {
+    content: "−";
+}
+
+/* Título da etapa */
+
+.passo-titulo {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: var(--text);
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* Descrição da etapa */
+
+.passo-descricao {
+    display: block;
+
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* Efeito ao passar o mouse */
+
+.passo-video summary:hover .passo-titulo,
+.passo-colab-resumo:hover .passo-titulo {
+    color: var(--cyan);
+}
+
+/* Espaçamento quando a etapa está aberta */
+
+.passo-video[open] summary {
+    margin-bottom: 15px;
+}
+
+.passo-colab[open] .passo-colab-resumo {
+    margin-bottom: 15px;
+}
+
+
+/* =========================================================
+   12. ÁREA DOS VÍDEOS
+========================================================= */
+
+.video-aula {
+    margin: 15px 0 10px;
+    padding: 16px;
+
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+
+    animation: aparecerVideo .3s ease;
+}
+
+.video-aula video {
+    display: block;
+
+    width: 100%;
+    max-height: 480px;
+    aspect-ratio: 16 / 9;
+
+    background: #05080f;
+    border-radius: 9px;
+}
+
+.video-aula p {
+    margin: 12px 0 0;
+
+    color: var(--muted);
+    font-size: 13px;
+}
+
+/* Animação de abertura do vídeo */
+
+@keyframes aparecerVideo {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================================================
+   13. SEÇÃO DE COLABORAÇÃO
+========================================================= */
+
+.passo-colab {
+    display: block;
+
+    padding: 22px 0;
+
+    border-bottom: 1px solid var(--line);
+}
+
+.passo-colab-resumo {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.passo-num {
+    color: var(--cyan);
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.passo-conteudo {
+    display: block;
+    flex: 1;
+    min-width: 0;
+}
+
+.passo-colab .video-aula {
+    margin-left: 0;
+}
+
+
+/* =========================================================
+   14. CHECKLIST DE APRENDIZADO
+========================================================= */
+
+.checklist {
+    display: grid;
+    gap: 0;
+
+    margin-top: 25px;
+
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.checklist label {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+
+    padding: 14px 17px;
+
+    background: var(--surface);
+    color: #d2d9e8;
+
+    border-bottom: 1px solid var(--line);
+
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.checklist label:last-child {
+    border: 0;
+}
+
+.checklist input {
+    margin-top: 5px;
+    accent-color: #6c8cff;
+}
+
+.checklist label.concluido span,
+.checklist label:has(input:checked) {
+    color: #8290a8;
+    text-decoration: line-through;
+}
+
+
+/* =========================================================
+   15. BARRA DE PROGRESSO
+========================================================= */
+
+.progresso {
+    margin: 22px 0 45px;
+}
+
+.progresso-texto {
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 9px;
+
+    font-size: 13px;
+}
+
+.progresso-texto span {
+    color: var(--muted);
+}
+
+.barra {
+    height: 8px;
+
+    background: #26334c;
+    border-radius: 10px;
+
+    overflow: hidden;
+}
+
+.barra div {
+    width: 0;
+    height: 100%;
+
+    background: linear-gradient(90deg, var(--blue), var(--cyan));
+
+    transition: width .3s;
+}
+
+
+/* =========================================================
+   16. DESAFIO FINAL
+========================================================= */
+
+.desafio {
+    padding: 28px;
+
+    background: linear-gradient(130deg, #1a2947, #18223a);
+    border: 1px solid #40517b;
+    border-radius: 14px;
+}
+
+.desafio h2 {
+    margin: 10px 0;
+    font-size: 27px;
+}
+
+.desafio h3 {
+    font-size: 16px;
+}
+
+.desafio p,
+.desafio li {
+    color: #c0cbe0;
+}
+
+
+/* =========================================================
+   17. REFERÊNCIAS E LINKS
+========================================================= */
+
+.referencias {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+
+    margin: 25px 0;
+}
+
+.referencias a {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    padding: 16px;
+
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 9px;
+}
+
+.referencias a span {
+    color: var(--muted);
+    font-size: 11px;
+}
+
+.referencias a strong {
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   18. RODAPÉ
+========================================================= */
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    padding: 28px max(calc((100% - 1064px) / 2), 5%);
+
+    border-top: 1px solid var(--line);
+}
+
+footer p {
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.voltar {
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   19. RESPONSIVIDADE — TABLETS
+========================================================= */
+
+@media (max-width: 800px) {
+
+    /* Cabeçalho */
+
+    .topo {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+
+        height: auto;
+        min-height: 68px;
+        padding: 15px 5%;
+    }
+
+    nav {
+        width: 100%;
+        gap: 18px;
+
+        padding-bottom: 4px;
+        overflow-x: auto;
+    }
+
+    nav a {
+        white-space: nowrap;
+    }
+
+    /* Hero */
+
+    .hero {
+        grid-template-columns: 1fr;
+        gap: 40px;
+
+        padding-top: 70px;
+    }
+
+    .hero-card {
+        max-width: 500px;
+    }
+
+    /* Seções */
+
+    .secao {
+        padding: 65px 5%;
+    }
+
+    .fundo {
+        padding-right: 5%;
+        padding-left: 5%;
+    }
+}
+
+
+/* =========================================================
+   20. RESPONSIVIDADE — CELULARES
+========================================================= */
+
+@media (max-width: 600px) {
+
+    /* Grids */
+
+    .dois,
+    .lista-funcoes,
+    .referencias {
+        grid-template-columns: 1fr;
+    }
+
+    /* Títulos */
+
+    .cabecalho-secao h2 {
+        font-size: 26px;
+    }
+
+    h1 {
+        font-size: 46px;
+    }
+
+    /* Hero */
+
+    .hero {
+        padding-right: 6%;
+        padding-left: 6%;
+    }
+
+    /* Colaboração */
+
+    .passo-colab-resumo {
+        gap: 12px;
+    }
+
+    /* Vídeos */
+
+    .passo-video summary {
+        padding-right: 30px;
+    }
+
+    .video-aula {
+        padding: 10px;
+    }
+
+    /* Rodapé */
+
+    footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+}
